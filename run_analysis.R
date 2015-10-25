@@ -1,17 +1,19 @@
 ############
+############Getting and cleaning data project
+############
 ###Read features used for each subject in both train and test data sets
-features <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/features.txt") #dim 561X2
-activity_label <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/activity_labels.txt") # label of the activities
+features <- read.table("./UCI HAR Dataset/features.txt") #dim 561X2
+activity_label <- read.table("./UCI HAR Dataset/activity_labels.txt") # label of the activities
 ####Read the training data
-subject_train <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/train/subject_train.txt") #dim 7352x1
-X_train <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/train/X_train.txt") #dim 7352X561
-Y_train <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/train/y_train.txt") #dim 7352X1
+subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt") #dim 7352x1
+X_train <- read.table("./UCI HAR Dataset/train/X_train.txt") #dim 7352X561
+Y_train <- read.table("./UCI HAR Dataset/train/y_train.txt") #dim 7352X1
 DATA_train <- data.frame(subject_train, Y_train, X_train)
 ColNames <- c("subject_train", "Y_train", as.character(features$V2))
 ####Read the test data 
-subject_test <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/test/subject_test.txt") #dim 2947X1
-X_test <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/test/X_test.txt") #dim 2947X561
-y_test <- read.table("/home/salk/Dropbox/GettingCleaningData/UCI HAR Dataset/test/y_test.txt") #dim 2947X1
+subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt") #dim 2947X1
+X_test <- read.table("./UCI HAR Dataset/test/X_test.txt") #dim 2947X561
+y_test <- read.table("./UCI HAR Dataset/test/y_test.txt") #dim 2947X1
 ######
 ######creating a data frame for with test data
 DATA_test <- data.frame(subject_test, y_test, X_test)

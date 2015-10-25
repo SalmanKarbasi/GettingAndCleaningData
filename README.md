@@ -17,3 +17,4 @@ Using the cleaned data at this point a new data set was generated where each row
 The resulted cleaned data was written to a text file named "TidyDataStep5.txt". 
 
 A description of the varibales can be found in CodeBook.md.
+
